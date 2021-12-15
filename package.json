@@ -1,0 +1,20 @@
+{
+  "name": "charuebot",
+  "version": "1.0.0",
+  "description": "kakao-discord socket connection",
+  "main": "charuebot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/charuebot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osias10/charueBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osias10/charueBot/issues"
+  },
+  "homepage": "https://github.com/osias10/charueBot#readme"
+}
