@@ -1,3 +1,7 @@
+var util = require('util');
+var EventEmitter = require('events').EventEmitter;
+
+
 var net = require('net');
 // 서버를 생성
 let socketS = (socket) => {
@@ -6,9 +10,15 @@ let socketS = (socket) => {
     socket.write("hello"+"\n[*Fin*]\n");
 
     socket.on('data', function(data){
-        console.log('rcv:' + data);
-        socket.write('반송'+data+"\n[*Fin*]\n");
-
+        //console.log('rcv:' + data);
+        //socket.write('반송'+data+"\n[*Fin*]\n");
+        let DisToKa = function(){
+            let self=this;
+            this.on('fromDiscord',function(){
+                console.log("이벤트 수신(fromDiscord)");
+                socket.write('')
+            });
+        }
 
     });
 
@@ -31,5 +41,6 @@ let socketS = (socket) => {
 
 
 module.exports={
-    socketS,
+    socketS
+    
 }
